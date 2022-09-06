@@ -1,4 +1,9 @@
-# 1. Run docker container
+# 1. Clone repo
+# 2. create venv 
+`python3 -m venv python-env`
+# 3.Install requirements
+`python-env/bin/python -m pip install -r requirements.txt`
+# 4. Run docker container
 `docker compose up -d`
-# 2. Run script
+# 5. Run script
 `./main.py`
