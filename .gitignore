@@ -1,3 +1,5 @@
 .git
 python-env
 .env
+.idea
+__pycache__
