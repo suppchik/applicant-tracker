@@ -59,10 +59,13 @@ def do_request(url, id, columns=[0], is_original=False):
         print("!!!!! NO DATA !!!!!!")
         wd.quit()
     r = [i.text for i in data]
+    rating_table = get_exists_element(wd, By.XPATH, f'//*[contains(text(), "{id}")]/../..', )
+    rating_table = rating_table.get_attribute('innerHtml')
     wd.quit()
 
     result = []
     for i in columns:
         result.append(r[i])
 
-    return result
+    aaa = 1
+    return result, rating_table
